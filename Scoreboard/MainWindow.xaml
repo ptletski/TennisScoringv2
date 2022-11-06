@@ -1,0 +1,46 @@
+﻿<Window x:Class="Scoreboard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="180,12,0,0" Name="gameHeader" Text="Game" VerticalAlignment="Top" FontWeight="Bold" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="241,12,0,0" Name="setHeader" Text="Set" VerticalAlignment="Top" FontWeight="Bold" />
+        <TextBlock Height="23" HorizontalAlignment="Right" Margin="0,12,187,0" Name="matchHeader" Text="Match" VerticalAlignment="Top" FontWeight="Bold" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="50,34,0,0" Name="namePlayer1" Text="player1" VerticalAlignment="Top" Width="95" FontWeight="Bold" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="50,63,0,0" Name="namePlayer2" Text="player2" VerticalAlignment="Top" Width="95" FontWeight="Bold" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="180,34,0,0" Name="gamePlayer1" Text="0" VerticalAlignment="Top" Width="31" TextAlignment="Center" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="180,63,0,0" Name="gamePlayer2" Text="0" VerticalAlignment="Top" Width="31" TextAlignment="Center" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="233,34,0,0" Name="setPlayer1" Text="0" VerticalAlignment="Top" Width="33" TextAlignment="Center" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="233,63,0,0" Name="setPlayer2" Text="0" VerticalAlignment="Top" Width="33" TextAlignment="Center" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="283,34,0,0" Name="matchPlayer1" Text="0" VerticalAlignment="Top" Width="33" TextAlignment="Center" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="283,63,0,0" Name="matchPlayer2" Text="0" VerticalAlignment="Top" Width="33" TextAlignment="Center" />
+        <RadioButton Content="2 of 3" Height="16" HorizontalAlignment="Left" Margin="23,256,0,0" Name="series2of3Btn" VerticalAlignment="Top" />
+        <RadioButton Content="3 of 5" Height="16" HorizontalAlignment="Left" Margin="23,278,0,0" Name="series3of5Btn" VerticalAlignment="Top" />
+        <Button Content="Start Match" Height="23" HorizontalAlignment="Left" Margin="12,119,0,0" Name="startMatchBtn" VerticalAlignment="Top" Width="75" Click="startMatchBtn_Click" />
+        <Button Content="Start Set" Height="23" HorizontalAlignment="Left" Margin="12,148,0,0" Name="startSetBtn" VerticalAlignment="Top" Width="75" Click="startSetBtn_Click" />
+        <Button Content="Start Game" Height="23" HorizontalAlignment="Left" Margin="12,177,0,0" Name="startGameBtn" VerticalAlignment="Top" Width="75" Click="startGameBtn_Click" />
+        <Button Content="Set Player 1" Height="23" HorizontalAlignment="Left" Margin="98,271,0,0" Name="setPlayer1Btn" VerticalAlignment="Top" Width="75" Click="setPlayer1Btn_Click" />
+        <Button Content="Set Player 2" Height="23" HorizontalAlignment="Left" Margin="180,271,0,0" Name="setPlayer2Btn" VerticalAlignment="Top" Width="75" Click="setPlayer2Btn_Click" />
+        <Button Content="Fault By Server" Height="23" HorizontalAlignment="Left" Margin="106,119,0,0" Name="faultByServerBtn" VerticalAlignment="Top" Width="97" Click="faultByServerBtn_Click" />
+        <Button Content="Let By Server" Height="23" HorizontalAlignment="Left" Margin="106,148,0,0" Name="letByServerBtn" VerticalAlignment="Top" Width="97" Click="letByServerBtn_Click" />
+        <Button Content="Winner By Server" Height="23" HorizontalAlignment="Left" Margin="216,119,0,0" Name="winnerByServerBtn" VerticalAlignment="Top" Width="120" Click="winnerByServerBtn_Click" />
+        <Button Content="Winner By Receiver" Height="23" HorizontalAlignment="Left" Margin="371,119,0,0" Name="winnerByReceiverBtn" VerticalAlignment="Top" Width="120" Click="winnerByReceiverBtn_Click" />
+        <Button Content="Error By Server" Height="23" HorizontalAlignment="Left" Margin="214,148,0,0" Name="unforcedErrorServerBtn" VerticalAlignment="Top" Width="122" Click="unforcedErrorByServerBtn_Click" />
+        <Button Content="Error By Receiver" Height="23" HorizontalAlignment="Left" Margin="371,148,0,0" Name="unforcedErrorRecieverBtn" VerticalAlignment="Top" Width="120" Click="unforcedErrorByReceiverBtn_Click" />
+        <Button Content="Penalize Server" Height="23" HorizontalAlignment="Left" Margin="214,177,0,0" Name="penalizeServerBtn" VerticalAlignment="Top" Width="122" Click="penalizeServerBtn_Click" />
+        <Button Content="Penalize Receiver" Height="23" HorizontalAlignment="Left" Margin="372,177,0,0" Name="penalizeReceiverBtn" VerticalAlignment="Top" Width="119" Click="penalizeReceiverBtn_Click" />
+        <GroupBox Header="Series" Height="63" HorizontalAlignment="Left" Margin="12,236,0,0" Name="matchSeriesGrp" VerticalAlignment="Top" Width="66">
+            <Grid />
+        </GroupBox>
+        <GroupBox Header="Server" Height="126" HorizontalAlignment="Left" Margin="96,92,0,0" Name="serverCmdGrp" VerticalAlignment="Top" Width="246" IsEnabled="True">
+            <Grid />
+        </GroupBox>
+        <GroupBox Header="Receiver" Height="126" HorizontalAlignment="Left" Margin="360,92,0,0" Name="receiverCmdGrp" VerticalAlignment="Top" Width="143">
+            <Grid />
+        </GroupBox>
+        <Image Height="23" HorizontalAlignment="Left" Margin="147,34,0,0" Name="player1serveImg" Stretch="Fill" VerticalAlignment="Top" Width="18" Source="/Scoreboard;component/images/tennis-racket-icon.jpg" />
+        <Image Height="24" HorizontalAlignment="Left" Margin="147,62,0,0" Name="player2serveImg" Stretch="Fill" VerticalAlignment="Top" Width="18" Source="/Scoreboard;component/images/tennis-racket-icon.jpg" />
+        <Button Content="Reset" Height="23" HorizontalAlignment="Left" Margin="410,272,0,0" Name="resetBtn" VerticalAlignment="Top" Width="75" Click="resetBtn_Click" />
+        <TextBlock Height="52" HorizontalAlignment="Left" Margin="332,34,0,0" Name="messageTxt" Text="" VerticalAlignment="Top" Width="143" />
+    </Grid>
+</Window>
